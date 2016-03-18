@@ -11,6 +11,8 @@ import java.util.logging.Logger;
 import net.milkbowl.vault.economy.AbstractEconomy;
 import net.milkbowl.vault.economy.EconomyResponse;
 import net.milkbowl.vault.economy.EconomyResponse.ResponseType;
+import nz.co.lolnet.LolCon.Main;
+import nz.co.lolnet.LolCon.ThreadChangeBalance;
 import org.bukkit.Bukkit;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
@@ -91,7 +93,7 @@ public class Economy_LolCon extends AbstractEconomy {
         balance = getBalance(playerName);
         if (balance >= amount) {
             balance = balance - amount;
-            new ThreadChangeBalance(playerName, (int) -amount, "Vaults API -" + Config.SERVER_NAME + "-" + playerName);
+            new ThreadChangeBalance(playerName, (int) -amount, "Vaults API");
             return new EconomyResponse(amount, balance, ResponseType.SUCCESS, null);
         } else {
             return new EconomyResponse(0, 0, ResponseType.FAILURE, "Cannot withdraw more than balance");

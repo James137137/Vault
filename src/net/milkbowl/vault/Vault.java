@@ -100,6 +100,7 @@ import org.json.simple.JSONValue;
 import com.nijikokun.register.payment.Methods;
 
 import net.milkbowl.vault.chat.plugins.Chat_TotalPermissions;
+import net.milkbowl.vault.economy.plugins.Economy_LolCon;
 import net.milkbowl.vault.economy.plugins.Economy_MiConomy;
 
 public class Vault extends JavaPlugin {
@@ -304,6 +305,9 @@ public class Vault extends JavaPlugin {
 
         // Try to load DigiCoin
         hookEconomy("DigiCoin", Economy_DigiCoin.class, ServicePriority.Normal, "co.uk.silvania.cities.digicoin.DigiCoin");
+        
+        // Try to load LolCon Economy
+        hookEconomy("LolCon Economy", Economy_LolCon.class, ServicePriority.Low, "nz.co.lolnet.LolCon.Main");
     }
 
     /**
