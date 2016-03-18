@@ -199,7 +199,7 @@ Vault currently supports the following: Permissions 3, PEX, GroupManager, bPerms
                         <version>1.0.2</version>
 			<optional>true</optional>
 			<scope>system</scope>
-			<systemPath>${project.basedir}/lib/lolCon.jar</systemPath>
+			<systemPath>${project.basedir}/lib/LolCon.jar</systemPath>
 		</dependency>
 		<dependency>
 			<groupId>org.anjocaido.groupmanager.GroupManager</groupId>
